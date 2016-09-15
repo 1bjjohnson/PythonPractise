@@ -1,9 +1,9 @@
-# from Tkinter import *
-import Tkinter as tk
+from Tkinter import *
+
 from tkFileDialog import *
 from PIL import ImageTk, Image
 
-root =
+root = Tk()
 root.wm_title("META tool")
 w, h = root.winfo_screenwidth(), root.winfo_screenheight()
 # root.overrideredirect(1)
@@ -13,7 +13,7 @@ root.geometry("%dx%d+0+0" % (w, h))
 
 path = "photo.jpg"
 
-img = tk.ImageTk.PhotoImage(Image.open(path))
+img = ImageTk.PhotoImage(Image.open(path))
 
 panel = Label(root, image = img)
 
